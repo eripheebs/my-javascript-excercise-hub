@@ -8,3 +8,14 @@ var selectElementsStartingWithA = function(array) {
   };
   return finalArray;
 }
+
+var removeNullElements = function(array) {
+  var length = array.length;
+  var finalArray = [];
+  for (var i = 0; i < length; i++){
+    if (array[i] != null){
+      finalArray.push(array[i]);
+    }
+  };
+  return finalArray;
+}

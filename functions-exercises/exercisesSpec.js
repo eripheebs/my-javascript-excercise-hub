@@ -7,4 +7,9 @@ describe('javascriptExcercises', function(){
     expect(result).toEqual(['apples', 'avocados']);
   });
 
+  it('removes null values from an array', function(){
+    var result = removeNullElements(['a', 'b', null, null, false, 0]);
+    expect(result).toEqual(['a', 'b', false, 0]);
+  });
+
 });
