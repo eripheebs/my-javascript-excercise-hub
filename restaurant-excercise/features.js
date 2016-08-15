@@ -1,5 +1,6 @@
 require('./lib/DishTracker.js');
 require('./lib/Dish.js');
+require('./lib/Calculator.js');
 
 var spaghetti = Object.create(Dish);
 spaghetti.init({name: "Spaghetti Bolognese", price: 6});
@@ -15,3 +16,10 @@ order.init();
 order.addDishes([spaghetti, spaghetti]);
 order.addDishes(spaghetti);
 order.dishes;
+
+getPrice: function(){
+  return this.price;
+}
+
+var calculator = Object.create(Calculator);
+calculator.addArrayItems(order.dishes, getPrice);

@@ -7,9 +7,6 @@ describe("Calculator", function(){
     Dish = {
       init: function(){
         this.price = 3
-      },
-      getPrice: function(){
-        return this.price;
       }
     };
     dish = Object.create(Dish);
@@ -18,6 +15,9 @@ describe("Calculator", function(){
   });
 
   it('should be able to add together items of an array', function(){
-    expect(calculator.addArrayItems(array, dish.getPrice)).toEqual(9);
+    var getPrice = function(){
+      return this.price;
+    };
+    expect(calculator.addArrayItems(array, getPrice)).toEqual(9);
   });
 });
