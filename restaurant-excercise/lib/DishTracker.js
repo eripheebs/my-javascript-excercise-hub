@@ -1,6 +1,6 @@
 require('./polyfills/includes.js')
 
-var Menu = {
+var DishTracker = {
   init: function(items){
     this.dishes = [].concat.apply([], items)
   },
@@ -28,4 +28,4 @@ var Menu = {
   }
 };
 
-module.exports = Menu;
+module.exports = DishTracker;
