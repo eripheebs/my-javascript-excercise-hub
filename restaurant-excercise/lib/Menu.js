@@ -2,28 +2,28 @@ require('./polyfills/includes.js')
 
 var Menu = {
   init: function(items){
-    this.items = [].concat.apply([], items)
+    this.dishes = [].concat.apply([], items)
   },
-  addItems: function(items){
-    this.items = [].concat.apply(this.items, items)
+  addDishes: function(items){
+    this.dishes = [].concat.apply(this.dishes, items)
   },
-  deleteItem: function(items){
+  deleteDish: function(items){
     var self = this;
     var checkIfIncluded = function(item){
       return items.includes(item);
     }
 
-    var thereIsStillItemIncluded = function(){
-      return !(count == self.items.length)
+    var thereIsStillDishIncluded = function(){
+      return !(count == self.dishes.length)
     }
 
     var count = 0;
-    self.items.forEach(function(item, index){
-      checkIfIncluded(item) ? self.items.splice(index, 1) : count++
+    self.dishes.forEach(function(item, index){
+      checkIfIncluded(item) ? self.dishes.splice(index, 1) : count++
     });
 
-    if (thereIsStillItemIncluded()) {
-      self.deleteItem(items)
+    if (thereIsStillDishIncluded()) {
+      self.deleteDish(items)
     };
   }
 };
