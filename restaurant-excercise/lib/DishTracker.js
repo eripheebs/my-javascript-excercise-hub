@@ -7,7 +7,7 @@ var DishTracker = {
   addDishes: function(items){
     this.dishes = [].concat.apply(this.dishes, items)
   },
-  deleteDish: function(items){
+  deleteDishes: function(items){
     var self = this;
     var checkIfIncluded = function(item){
       return items.includes(item);
@@ -23,7 +23,7 @@ var DishTracker = {
     });
 
     if (thereIsStillDishIncluded()) {
-      self.deleteDish(items)
+      self.deleteDishes(items)
     };
   }
 };

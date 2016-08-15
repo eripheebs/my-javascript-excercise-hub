@@ -12,4 +12,8 @@ describe("Dish", function(){
     expect(dish.name).toEqual("Fried Chicken");
     expect(dish.price).toEqual(3);
   });
+
+  it("can tell you it's price", function(){
+    expect(dish.getPrice()).toEqual(3);
+  })
 });
