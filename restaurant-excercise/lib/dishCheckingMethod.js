@@ -1,3 +1,5 @@
+var _applyMethod = require("./helpers.js")._applyMethod;
+
 var containsItem = function(hashOfArgs){
   var item = hashOfArgs["item"];
   var list = hashOfArgs["list"];
@@ -8,8 +10,5 @@ var containsItem = function(hashOfArgs){
   return false;
 };
 
-var _applyMethod = function(method, item){
-  return method.apply(item)
-};
 
 module.exports = containsItem;

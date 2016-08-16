@@ -1,5 +1,5 @@
 describe("List (Dish) Checking Method", function(){
-  var containsItem = require("../lib/dishCheckingHelper.js");
+  var containsItem = require("../lib/dishCheckingMethod.js");
   var dishTracker, dishTracker2, dish, dish2;
 
   beforeEach(function(){
