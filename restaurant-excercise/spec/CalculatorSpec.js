@@ -14,7 +14,7 @@ describe("Calculator", function(){
     array = [dish, dish, dish]
   });
 
-  it('should be able to add together items of an array', function(){
+  it("should be able to add together items of an array", function(){
     var getPrice = function(){
       return this.price;
     };

@@ -23,3 +23,10 @@ getPrice: function(){
 
 var calculator = Object.create(Calculator);
 calculator.addArrayItems(order.dishes, getPrice);
+
+// Dish tracker can also be used to track stock in restaurant
+var stock = Object.create(DishTracker);
+stock.init();
+for(var i=0; i < 10; i++){
+  stock.addDishes([spaghetti, meat])
+}

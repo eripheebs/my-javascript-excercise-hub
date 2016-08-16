@@ -28,4 +28,8 @@ describe("DishTracker", function(){
     expect(dishTracker.dishes).not.toContain(dish);
     expect(dishTracker.dishes).not.toContain(dish3);
   });
+
+  it("returns dishes as a method", function(){
+    expect(dishTracker.getDishes()).toEqual([]);
+  });
 });

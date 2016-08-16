@@ -25,6 +25,9 @@ var DishTracker = {
     if (thereIsStillDishIncluded()) {
       self.deleteDishes(items)
     };
+  },
+  getDishes: function(){
+    return this.dishes
   }
 };
 
